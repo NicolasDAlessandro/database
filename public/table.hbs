@@ -1,0 +1,21 @@
+<h2 style="text-align: center;">Tabla de Productos: </h2>
+<div style="width: 100%;display: flex; align-items: center;justify-content:center;">
+    {{#if products}}
+        <table class="table table-hover" style="width:380px">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+            {{#each products}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.price}}</td>
+                    <td>
+                        <img src={{this.url}} alt={{this.name}} width="60px">
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+    {{/if}}
+</div>
